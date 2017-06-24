@@ -1,27 +1,25 @@
-.spacer {
-    flex: 1 1 auto;
-}
-
-.center_align {
-    align-items: center;
-}
-
-.small {
-    font-size: 60%;
-}
-
 .outline {
     border: thin solid red;
+}
 
-    &.green {
-        border: thin solid green;
+ul {
+
+    &.no-styles {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none
+        }
     }
 }
 
-.gap {
-    margin-bottom: 10px;
-}
-
 .no-padding {
-    padding: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+
+    & > [class*='col-'] {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

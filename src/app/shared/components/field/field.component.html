@@ -1,16 +1,12 @@
-<md-list-item>
-
-  <md-input-container
-    [formGroup]="group">
-
-    <input
-      mdInput
-      [type]="attributes.type"
-      [name]="attributes.name"
-      [placeholder]="attributes.placeholder | myCapitalize"
-      [value]="attributes.value"
-      [formControlName]="attributes.name">
-
-  </md-input-container>
-
-</md-list-item>
+<div class="form-group" [formGroup]="group">
+  <label [for]="attributes.name">{{attributes.placeholder}}</label>
+  
+  <input
+    [id]="attributes.name"
+    class="form-control"
+    [type]="attributes.type"
+    [name]="attributes.name"
+    [placeholder]="attributes.placeholder | myCapitalize"
+    [value]="attributes.value"
+    [formControlName]="attributes.name">
+</div>

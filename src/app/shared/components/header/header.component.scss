@@ -1,0 +1,23 @@
+header {
+
+    .row {
+        margin: 15px 0;
+
+        .brand {
+            height: 80px;
+        }
+
+        .product-info {
+            border-left: thin solid #000;
+            padding-left: 30px;
+
+            h2 {
+                margin-top: 0 !important;
+            }
+        }
+
+        .logout {
+            color: #FFF;
+        }
+    }
+}

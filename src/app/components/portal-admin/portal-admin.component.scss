@@ -1,0 +1,16 @@
+@import '../../../assets/stylesheets/variables';
+
+table {
+    width: 100%;
+
+    thead {
+        background-color: $table-header-bg;
+    }
+
+    th,
+    td {
+        border: thin solid $gray;
+        text-align: center;
+        padding: 20px 0;
+    }
+}

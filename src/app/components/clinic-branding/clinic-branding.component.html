@@ -1,0 +1,66 @@
+<div class="content">
+
+  <div class="row justify-content-md-center">
+
+    <div class="card inner-card">
+
+      <div class="card-block">
+
+        <h2 class="card-title">{{formTitle | myCapitalize}}</h2>
+
+        <div class="form-group">
+          <label for="firstname">NAME</label>
+          <input [(ngModel)]="clinicBranding.name" type="text" id="firstname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">ADDRESS 1</label>
+          <input [(ngModel)]="clinicBranding.address1" type="text" id="lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">ADDRESS 2</label>
+          <input [(ngModel)]="clinicBranding.address2" type="text" id="lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="firstname">CITY</label>
+          <input [(ngModel)]="clinicBranding.city" type="text" id="firstname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">STATE</label>
+          <input [(ngModel)]="clinicBranding.state" type="text" id="lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">ZIP CODE</label>
+          <input [(ngModel)]="clinicBranding.zipcode" type="text" id="lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">PHONE 1</label>
+          <input [(ngModel)]="clinicBranding.phone1" type="text" id="lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">PHONE 2</label>
+          <input [(ngModel)]="clinicBranding.phone2" type="text" id="lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">URL PREFIX</label>
+          <input [(ngModel)]="clinicBranding.urlprefix" type="text" id="lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" (click)="addUpdate()">SAVE</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

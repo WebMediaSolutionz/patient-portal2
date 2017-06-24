@@ -1,6 +1,5 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { MaterialModule } from '@angular/material';
 import { Observable } from 'rxjs';
 
 // Components
@@ -33,9 +32,6 @@ describe('App Component', () => {
       declarations: [
         AppComponent,
         CapitalizePipe
-      ],
-      imports: [
-        MaterialModule
       ],
       providers: [
         { provide: ConfigService, useClass: ConfigServiceStub }

@@ -1,81 +1,106 @@
-<md-toolbar color="primary">
+<div>
 
-  <a class="logo" routerLink="/dashboard">
-    <ss2-pulse-logo></ss2-pulse-logo>
-  </a>
+  <div class="container">
 
-  <button
-    [class.active]="configService.activeLink === 'dashboard'"
-    md-button
-    routerLink="/dashboard"
-    *ngIf="authService.isAuthenticated">
-    <span><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</span>
-  </button>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a [class.active]="configService.activeLink === 'clinic-branding'" routerLink="/clinic-branding">Clinic Branding</a>
+            </li>
 
-  <span class="spacer"></span>
+            <li>
+              <a [class.active]="configService.activeLink === 'general-settings'" routerLink="/general-settings">General Settings</a>
+            </li>
 
-  <button
-    [class.active]="configService.activeLink === 'user'"
-    md-button
-    routerLink="/user"
-    *ngIf="authService.isAuthenticated">
-    <span>Welcome {{authService.name | myCapitalize}}</span>
-  </button>
+            <li>
+              <a [class.active]="configService.activeLink === 'patient-management'" routerLink="/patient-management">Patient Management</a>
+            </li>
 
-  <button
-    [class.active]="configService.activeLink === 'login'"
-    md-button
-    routerLink="/login"
-    *ngIf="!authService.isAuthenticated">
-    <span><i class="fa fa-sign-in" aria-hidden="true"></i> Login</span>
-  </button>
+            <li>
+              <a [class.active]="configService.activeLink === 'templates'" routerLink="/templates">Templates</a>
+            </li>
 
-  <button
-    [class.active]="configService.activeLink === 'signup'"
-    md-button
-    routerLink="/signup"
-    *ngIf="!authService.isAuthenticated">
-    <span><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</span>
-  </button>
+            <li>
+              <a [class.active]="configService.activeLink === 'portal-admin'" routerLink="/portal-admin">Portal Admin</a>
+            </li>
 
+            <li>
+              <a [class.active]="configService.activeLink === 'user'" routerLink="/user">Edit Profile</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
-  <button
-    md-icon-button
-    [mdMenuTriggerFor]="menu"
-    *ngIf="authService.isAuthenticated">
-    <span><i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
-  </button>
+    <!-- *** -->
 
-  <md-menu class="dropdown" #menu="mdMenu">
+    <!--<button
+      [class.active]="configService.activeLink === 'dashboard'"
+      routerLink="/dashboard"
+      *ngIf="authService.isAuthenticated">
+      <span><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</span>
+    </button>
+
+    <span class="spacer"></span>
 
     <button
       [class.active]="configService.activeLink === 'user'"
-      md-menu-item
-      routerLink="/user">
-      <span><i class="fa fa-user" aria-hidden="true"></i> Profile</span>
+      routerLink="/user"
+      *ngIf="authService.isAuthenticated">
+      <span>Welcome {{authService.name | myCapitalize}}</span>
     </button>
 
     <button
-      [class.active]="configService.activeLink === 'settings'"
-      md-menu-item
-      routerLink="/settings">
-      <span><i class="fa fa-cog" aria-hidden="true"></i> Settings</span>
+      [class.active]="configService.activeLink === 'login'"
+      routerLink="/login"
+      *ngIf="!authService.isAuthenticated">
+      <span><i class="fa fa-sign-in" aria-hidden="true"></i> Login</span>
     </button>
 
     <button
-      *ngIf="configService.accessLevel === 'admin'"
-      [class.active]="configService.activeLink === 'pulse-component-lib'"
-      md-menu-item
-      routerLink="/pulse-component-lib">
-      <span><i class="fa fa-cog" aria-hidden="true"></i> pulse component library</span>
+      [class.active]="configService.activeLink === 'signup'"
+      routerLink="/signup"
+      *ngIf="!authService.isAuthenticated">
+      <span><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</span>
     </button>
+
 
     <button
-      md-menu-item
-      (click)="authService.logout()">
-      <span><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
+      *ngIf="authService.isAuthenticated">
+      <span><i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
     </button>
 
-  </md-menu>
+    <div class="dropdown">
+
+      <button
+        [class.active]="configService.activeLink === 'user'"
+        routerLink="/user">
+        <span><i class="fa fa-user" aria-hidden="true"></i> Profile</span>
+      </button>
+
+      <button
+        [class.active]="configService.activeLink === 'settings'"
+        routerLink="/settings">
+        <span><i class="fa fa-cog" aria-hidden="true"></i> Settings</span>
+      </button>
+
+      <button
+        *ngIf="configService.accessLevel === 'admin'"
+        [class.active]="configService.activeLink === 'pulse-component-lib'"
+        routerLink="/pulse-component-lib">
+        <span><i class="fa fa-cog" aria-hidden="true"></i> pulse component library</span>
+      </button>
+
+      <button
+        (click)="authService.logout()">
+        <span><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
+      </button>
+
+    </div>-->
+
+  </div>
   
-</md-toolbar>
+</div>

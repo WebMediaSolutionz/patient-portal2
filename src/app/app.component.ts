@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 // Services
 import { ConfigService } from './shared/services/config.service';
+import { AuthService } from "./shared/services/auth.service";
 
 @Component({
   moduleId: module.id,
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit {
 
   private loaded: boolean = false;
 
-  constructor(private configService: ConfigService) {}
+  constructor(private configService: ConfigService,
+              private authService: AuthService) {}
 
   public ngOnInit(): void {
     this.configService.getConfig()

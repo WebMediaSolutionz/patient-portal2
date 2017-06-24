@@ -1,12 +1,9 @@
-<!-- top navigation -->
-<ss2-nav></ss2-nav>
+<!-- page header -->
+<pp-header *ngIf="authService.isAuthenticated"></pp-header>
 
 <!-- page main content -->
-<md-card [class.no-padding]="configService.activeLink === 'settings'">
+<div class="container">
 
   <router-outlet></router-outlet>
 
-</md-card>
-
-<!-- page footer -->
-<ss2-footer *ngIf="loaded" [company]="configs.company"></ss2-footer>
+</div>

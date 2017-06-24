@@ -1,4 +1,12 @@
 body {
-    background: #eee;
-    margin: 0;
+    background-color: $bg_color;
+    color: $text_color;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+nav {
+    border-radius: 5px;
 }

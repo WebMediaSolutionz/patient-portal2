@@ -1,17 +1,31 @@
-@import 'variables';
+.container {
+    margin-bottom: 30px;
+
+    .content,
+    .card {
+        background-color: $content_bg_color;
+        padding: 20px;
+        box-shadow: $box-shadow;
+        border-radius: 5px;
+    }
+}
+
+.app-loading {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 300px;
+}
 
 .inner-card {
-    width: $inner-card-width-sm;
-    margin: auto;
-    text-align: center;
-    background-color: $gray-lg;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    &.large {
-        width: $inner-card-width-lg;
-    }
+.btn-primary {
+    background-color: $blue_bg;
+}
 
-    .mat-list .mat-list-item .mat-list-item-content,
-    .mat-nav-list .mat-list-item .mat-list-item-content {
-        display: block;
-    }
+.btn {
+    border: none;
 }

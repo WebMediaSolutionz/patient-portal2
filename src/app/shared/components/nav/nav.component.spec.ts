@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { SpyLocation } from '@angular/common/testing';
 import { Observable } from "rxjs";
-import { MaterialModule } from "@angular/material";
 
 // Components
 import { NavComponent } from './nav.component';
@@ -42,7 +41,6 @@ describe('Nav Component', () => {
         { provide: Location, useClass: SpyLocation },
         { provide: Router, useClass: RouterStub }
       ],
-      imports: [ MaterialModule ],
       schemas: [ NO_ERRORS_SCHEMA ]
     });
 

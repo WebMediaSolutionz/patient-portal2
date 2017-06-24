@@ -1,0 +1,69 @@
+<div>
+
+  <div class="inner-card large">
+
+    <div>
+      <h1>{{title | myCapitalize}}</h1>
+    </div>
+
+    <div>
+
+    <div cols="3" rowHeight="75px">
+
+      <div>
+        <h3>Practices</h3>
+      </div>
+
+      <div>
+        <h3>Roles at this practice</h3>
+      </div>
+
+      <div>
+        <h3>Locations</h3>
+      </div>
+
+    </div>
+      
+      <div *ngFor="let client of clients" class="gap">
+
+        <div cols="3" rowHeight="2:1">
+
+          <div>{{client.clientname}}</div>
+
+          <div>
+            
+            <ul>
+
+              <li *ngFor="let role of client.roles">
+
+                {{role.name}}
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div>
+
+            <ul>
+
+              <li *ngFor="let location of client.locations">
+
+                {{location.name}}
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,37 +1,31 @@
-<md-card class="inner-card">
+<div class="content">
 
-  <ss2-page-title [pageTitle]="formTitle"></ss2-page-title>
+  <div class="row justify-content-md-center">
 
-  <md-card-content>
+    <div class="card inner-card">
 
-    <md-list>
+      <div class="card-block">
 
-      <md-list-item>
-        <md-input-container>
-          <input [(ngModel)]="user.account" mdInput placeholder="Account" disabled>
-        </md-input-container>
-      </md-list-item>
+        <h2 class="card-title">{{formTitle | myCapitalize}}</h2>
 
-      <md-list-item>
-        <md-input-container>
-          <input [(ngModel)]="user.firstname" mdInput placeholder="First Name">
-        </md-input-container>
-      </md-list-item>
+        <div class="form-group">
+          <label for="firstname">FIRST NAME</label>
+          <input [(ngModel)]="user.firstname" type="text" id="firstname" class="form-control">
+        </div>
 
-      <md-list-item>
-        <md-input-container>
-          <input [(ngModel)]="user.lastname" mdInput placeholder="Last Name">
-        </md-input-container>
-      </md-list-item>
+        <div class="form-group">
+          <label for="lastname">LAST NAME</label>
+          <input [(ngModel)]="user.lastname" type="text" id="lastname" class="form-control">
+        </div>
 
-      <md-list-item>
-        <md-card-actions>
-          <button pc-button (click)="post()">Save Changes</button>
-        </md-card-actions>
-      </md-list-item>
+        <div class="form-group">
+          <button class="btn btn-primary" (click)="post()">SAVE</button>
+        </div>
 
-    </md-list>
+      </div>
 
-  </md-card-content>
+    </div>
 
-</md-card>
+  </div>
+
+</div>

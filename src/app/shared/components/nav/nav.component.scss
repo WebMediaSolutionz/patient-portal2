@@ -1,14 +1,17 @@
 @import '../../../../assets/stylesheets/variables';
 
-.logo {
-    display: block;
-    margin-top: 5px;
-}
+.navbar-default {
+    font-weight: bold;
+    background-color: $blue_bg;
 
-.active {
-    background-color: $active-link;
+    .navbar-nav > li > a {
+        padding-top: 17px;
+        padding-bottom: 18px;
+        color: #FFF;
 
-    &.mat-menu-item {
-        background-color: $mat-menu-item_active-link;
+        &:hover,
+        &.active {
+            background-color:#0069a3;
+        }
     }
 }

@@ -1,5 +1,4 @@
 import { inject, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MdSnackBar } from '@angular/material';
 import { FormsModule, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 
@@ -17,20 +16,19 @@ describe('ErrorDisplay Service', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        ErrorDisplayService,
-        { provide: MdSnackBar, useClass: MdSnackBarStub }
+        ErrorDisplayService
       ]
     });
   });
 
   describe(`constructor()`, () => {
-    it('should be initialized', inject([ErrorDisplayService, MdSnackBar], (service: ErrorDisplayService) => {
+    it('should be initialized', inject([ErrorDisplayService], (service: ErrorDisplayService) => {
       expect(service).toBeTruthy();
     }));
   });
 
   describe(`display()`, () => {
-    it('should invoke MdSnackBar.open to display error message', inject([ErrorDisplayService, MdSnackBar], (service: ErrorDisplayService) => {
+    it('should invoke MdSnackBar.open to display error message', inject([ErrorDisplayService], (service: ErrorDisplayService) => {
       let spy = spyOn(service['sb'], 'open');
       let errorMsg1 = 'error message';
       let errorMsg2 = 'some error';
@@ -46,7 +44,7 @@ describe('ErrorDisplay Service', () => {
   });
 
   describe(`getErrorCount()`, () => {
-    it('should return the right number of form errors', inject([ErrorDisplayService, MdSnackBar], (service: ErrorDisplayService) => {
+    it('should return the right number of form errors', inject([ErrorDisplayService], (service: ErrorDisplayService) => {
       let form = new FormGroup({
         firstField: new FormControl('', Validators.maxLength(2)),
         secondField: new FormControl('', Validators.maxLength(2)),

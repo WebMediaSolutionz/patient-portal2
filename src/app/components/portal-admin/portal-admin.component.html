@@ -1,0 +1,58 @@
+<div>
+
+	<table>
+
+		<thead>
+		<tr>
+
+		<th></th>
+
+		<th>CLIENT NAME</th>
+
+		<th>CLIENT NUMBER</th>
+
+		<th>IP ADDRESS</th>
+
+		<th></th>
+
+		</tr>
+		</thead>
+
+		<tbody>
+			<tr *ngFor="let client of clients">
+
+				<td><button class="btn btn-primary">SELECT</button></td>
+
+				<td>{{client.clientname}}<br />{{client.clientid}}</td>
+
+				<td>
+
+					{{client.clientno}}
+
+				</td>
+
+				<td>
+
+					{{client.ipaddress}}
+
+				</td>
+
+				<td>
+
+					<button class="btn btn-primary"><i class="fa fa-user-plus" aria-hidden="true"></i> INVITE ADMIN</button>
+
+					<button class="btn btn-primary">CLINIC ADMINS</button>
+
+					<button class="btn btn-primary" (click)="edit(client)"><i class="fa fa-pencil" aria-hidden="true"></i> EDIT</button>
+
+				</td>
+
+			</tr>
+
+		</tbody>
+
+	</table>
+
+	<pp-client-modal [client]="client" (save)="saveClient(client)"></pp-client-modal>
+
+</div>

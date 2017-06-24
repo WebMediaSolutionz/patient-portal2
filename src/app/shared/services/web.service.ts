@@ -49,6 +49,15 @@ export class WebService {
                     .map((res) => res.json());
   }
 
+  public saveClient(clientData: any): any {
+   this._confirmationMsg(`Client Modifications been saved`);
+
+   this.dest = this.API_URL + '/saveclient';
+
+    return this.http.post(this.dest, clientData, this.authService.tokenHeader)
+                    .map((res) => res.json());
+  }
+
   public getUser(): Observable<User> {
     this.dest = this.API_URL + '/users/me';
 
@@ -68,6 +77,22 @@ export class WebService {
   public getConfig(): Observable<any> {
     return this.http.get(this.configUrl)
                     .map((res) => res.json());
+  }
+
+  public addUpdate(urlAction: string, data: any): any {
+    this._confirmationMsg();
+    
+    this.dest = this.API_URL + urlAction;
+
+    return this.http.post(this.dest, data, this.authService.tokenHeader)
+      .map((res) => res.json());
+  }
+
+  public getOne(urlAction: string, idValue:string): any {
+    this._confirmationMsg(`Trying to update ` + urlAction );
+    this._confirmationMsg('url: ' + this.API_URL + urlAction + '/' + idValue);
+    return this.http.get(this.API_URL + urlAction+ '/'+ idValue, this.authService.tokenHeader)
+      .map((res) => res.json());
   }
 
   private _confirmationMsg(msg: string = `modifications have been saved`) {

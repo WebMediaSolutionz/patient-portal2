@@ -6,28 +6,21 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthManager } from './shared/services/auth.manager';
 
 // Components
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { PulseComponentLibComponent } from './components/pulse-component-lib/pulse-component-lib.component';
+import { ClinicBrandingComponent } from "./components/clinic-branding/clinic-branding.component";
+import { GeneralSettingsComponent } from './components/general-settings/general-settings.component';
+import { PatientManagementComponent } from './components/patient-management/patient-management.component';
+import { TemplatesComponent } from './components/templates/templates.component';
+import { PortalAdminComponent } from './components/portal-admin/portal-admin.component';
+import { PracticesAndRolesComponent } from './components/practices-and-roles/practices-and-roles.component';
 
 const appRoutes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'dashboard',
-    },
-    {
-        path: 'dashboard',
-        component: DashboardComponent,
-        canActivate: [AuthManager]
-    },
-    {
-        path: 'signup',
-        component: SignUpComponent
+        redirectTo: 'portal-admin',
     },
     {
         path: 'login',
@@ -39,13 +32,33 @@ const appRoutes: Routes = [
         canActivate: [AuthManager]
     },
     {
-        path: 'settings',
-        component: SettingsComponent,
+        path: 'clinic-branding',
+        component: ClinicBrandingComponent,
         canActivate: [AuthManager]
     },
     {
-        path: 'pulse-component-lib',
-        component: PulseComponentLibComponent,
+        path: 'general-settings',
+        component: GeneralSettingsComponent,
+        canActivate: [AuthManager]
+    },
+    {
+        path: 'patient-management',
+        component: PatientManagementComponent,
+        canActivate: [AuthManager]
+    },
+    {
+        path: 'templates',
+        component: TemplatesComponent,
+        canActivate: [AuthManager]
+    },
+    {
+        path: 'portal-admin',
+        component: PortalAdminComponent,
+        canActivate: [AuthManager]
+    },
+    {
+        path: 'clients',
+        component: PracticesAndRolesComponent,
         canActivate: [AuthManager]
     },
     {

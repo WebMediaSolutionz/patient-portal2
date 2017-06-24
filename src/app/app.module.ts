@@ -3,11 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import 'hammerjs';
-import { PulseComponentModule } from '@pulse/angular-components/src/lib/module';
 
 // Routing
 import { routing } from './app.routing';
@@ -27,61 +24,44 @@ import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
 // Components
 import { AppComponent } from './app.component';
 import { NavComponent } from './shared/components/nav/nav.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { PulseLogoComponent } from './shared/components/pulse-logo/pulse-logo.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { PageTitleComponent } from './shared/components/page-title/page-title.component';
+import { PracticesAndRolesComponent } from './components/practices-and-roles/practices-and-roles.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 import { FieldComponent } from './shared/components/field/field.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { GeneralComponent } from './components/partials/settings/general/general.component';
-import { PracticesAndRolesComponent } from
-'./components/partials/settings/practices-and-roles/practices-and-roles.component';
-import { PrivacyPolicyComponent } from
-'./components/partials/settings/privacy-policy/privacy-policy.component';
-import { PatientSummaryComponent } from
-'./components/partials/settings/patient-summary/patient-summary.component';
-import { InteractionWarningsComponent } from
-'./components/partials/settings/interaction-warnings/interaction-warnings.component';
-import { PasswordRulesComponent } from
-'./components/partials/settings/password-rules/password-rules.component';
-import { PulseComponentLibComponent } from "./components/pulse-component-lib/pulse-component-lib.component";
+import { ClinicBrandingComponent } from './components/clinic-branding/clinic-branding.component';
+import { GeneralSettingsComponent } from './components/general-settings/general-settings.component';
+import { PatientManagementComponent } from './components/patient-management/patient-management.component';
+import { TemplatesComponent } from './components/templates/templates.component';
+import { PortalAdminComponent } from './components/portal-admin/portal-admin.component';
+import { ClientModalComponent } from "./shared/components/client-modal/client-modal.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     CapitalizePipe,
-    SignUpComponent,
     LoginComponent,
     UserComponent,
-    DashboardComponent,
-    PulseLogoComponent,
-    FooterComponent,
     PageNotFoundComponent,
-    PageTitleComponent,
     FieldComponent,
-    SettingsComponent,
-    GeneralComponent,
     PracticesAndRolesComponent,
-    PrivacyPolicyComponent,
-    PatientSummaryComponent,
-    InteractionWarningsComponent,
-    PasswordRulesComponent,
-    PulseComponentLibComponent
+    HeaderComponent,
+    ClinicBrandingComponent,
+    GeneralSettingsComponent,
+    PatientManagementComponent,
+    TemplatesComponent,
+    PortalAdminComponent,
+    ClientModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule,
     BrowserAnimationsModule,
-    routing,
-    PulseComponentModule
+    routing
   ],
   providers: [
     WebService,
