@@ -8,7 +8,7 @@ import { ConfigService } from '../../../shared/services/config.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'ss2-nav',
+  selector: 'pp-nav',
   templateUrl: 'nav.component.html',
   styleUrls: ['nav.component.scss']
 })

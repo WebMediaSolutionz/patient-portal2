@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-// Components
+// Services
 import { AuthService } from "../../services/auth.service";
 
 @Component({

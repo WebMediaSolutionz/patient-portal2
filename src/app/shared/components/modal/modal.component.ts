@@ -8,7 +8,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ModalComponent {
 
-  @Output() protected save: EventEmitter<any>;
+  @Output() protected save: EventEmitter<any> = new EventEmitter;
 
   public saveItem(): void {
     this.save.emit();

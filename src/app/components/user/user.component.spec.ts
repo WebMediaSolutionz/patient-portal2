@@ -8,6 +8,9 @@ import { UserComponent } from './user.component';
 // Services
 import { WebService } from "../../shared/services/web.service";
 
+// Pipes
+import { CapitalizePipe } from "../../shared/pipes/capitalize.pipe";
+
 // Models
 import { User } from "../../shared/custom-types/classes/user";
 
@@ -27,7 +30,10 @@ describe('User Component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserComponent ],
+      declarations: [
+        UserComponent,
+        CapitalizePipe
+      ],
       providers: [
         { provide: WebService, useClass: WebServiceStub}
       ],

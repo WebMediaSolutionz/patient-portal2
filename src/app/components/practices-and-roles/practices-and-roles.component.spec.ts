@@ -6,10 +6,10 @@ import { NO_ERRORS_SCHEMA } from "@angular/core";
 import { PracticesAndRolesComponent } from './practices-and-roles.component';
 
 // Services
-import { WebService } from "../../../../shared/services/web.service";
+import { WebService } from "../../shared/services/web.service";
 
 // Pipes
-import { CapitalizePipe } from "../../../../shared/pipes/capitalize.pipe";
+import { CapitalizePipe } from "../../shared/pipes/capitalize.pipe";
 
 class WebServiceStub {
   getClients() {

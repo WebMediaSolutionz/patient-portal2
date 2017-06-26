@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 // Services
 import { ConfigService } from './shared/services/config.service';
+import { AuthService } from "./shared/services/auth.service";
 
 // Pipes
 import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
@@ -23,6 +24,10 @@ class ConfigServiceStub {
   }
 }
 
+class AuthServiceStub {
+  public isAuthenticated: boolean;
+}
+
 describe('App Component', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
@@ -34,7 +39,8 @@ describe('App Component', () => {
         CapitalizePipe
       ],
       providers: [
-        { provide: ConfigService, useClass: ConfigServiceStub }
+        { provide: ConfigService, useClass: ConfigServiceStub },
+        { provide: AuthService, useClass: AuthServiceStub }
       ],
       schemas: [ NO_ERRORS_SCHEMA ]
     });

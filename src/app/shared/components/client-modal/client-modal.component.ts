@@ -19,10 +19,11 @@ export class ClientModalComponent extends ModalComponent {
 
   @Output() save: EventEmitter<any> = new EventEmitter;
 
+  @Input() private client: Client;
+
   constructor(private webService: WebService) {
     super();
   }
-  @Input() private client: Client;
 
   public saveItem(): void {
     // console.info('save client');

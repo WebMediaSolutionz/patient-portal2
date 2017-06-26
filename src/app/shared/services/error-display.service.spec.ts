@@ -2,15 +2,8 @@ import { inject, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 
-// Components
+// Services
 import { ErrorDisplayService } from '../../shared/services/error-display.service';
-
-// Pipes
-import { CapitalizePipe } from '../../shared/pipes/capitalize.pipe';
-
-class MdSnackBarStub {
-  public open(error, icon, options) {}
-}
 
 describe('ErrorDisplay Service', () => {
   beforeEach(() => {
@@ -29,17 +22,17 @@ describe('ErrorDisplay Service', () => {
 
   describe(`display()`, () => {
     it('should invoke MdSnackBar.open to display error message', inject([ErrorDisplayService], (service: ErrorDisplayService) => {
-      let spy = spyOn(service['sb'], 'open');
+      let spy = spyOn(console, 'error');
       let errorMsg1 = 'error message';
       let errorMsg2 = 'some error';
 
       service.display(errorMsg1);
 
-      expect(spy).toHaveBeenCalledWith(errorMsg1, 'close', {duration: 2000});
+      expect(spy).toHaveBeenCalledWith(errorMsg1);
 
       service.display();
 
-      expect(spy).toHaveBeenCalledWith(errorMsg2, 'close', {duration: 2000});
+      expect(spy).toHaveBeenCalledWith(errorMsg2);
     }));
   });
 

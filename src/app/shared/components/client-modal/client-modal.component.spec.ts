@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { Component, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Observable } from "rxjs";
 
 // Components
@@ -17,28 +17,58 @@ class WebServiceStub {
   }
 }
 
-xdescribe('ClientModalComponent', () => {
+describe('ClientModal Component', () => {
   let component: ClientModalComponent;
-  let fixture: ComponentFixture<ClientModalComponent>;
+  let fixture: ComponentFixture<TestComponentWrapper>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClientModalComponent ],
+      declarations: [
+        TestComponentWrapper,
+        ClientModalComponent
+      ],
       providers: [
         { provide: WebService, useClass: WebServiceStub }
       ],
-      schemas: [ NO_ERRORS_SCHEMA ]
-    })
-    .compileComponents();
-  }));
+      schemas: [
+        NO_ERRORS_SCHEMA,
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
+    });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ClientModalComponent);
-    component = fixture.componentInstance;
+    fixture = TestBed.createComponent(TestComponentWrapper);
+    component = fixture.debugElement.children[0].componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe(`constructor()`, () => {
+    it('should be initialized', () => {
+      expect(component).toBeDefined();
+    });
+  });
+
+  describe(`saveItem()()`, () => {
+    it('should invoke EventEmitter.emit()', () => {
+      let spy = spyOn(component['save'], 'emit');
+
+      component.saveItem();
+
+      expect(spy).toHaveBeenCalled();
+    });
   });
 });
+
+@Component({
+  selector: 'test-component-wrapper',
+  template: '<pp-client-modal [client]="client" (save)="saveItem()"></pp-client-modal>'
+})
+class TestComponentWrapper {
+
+  private client: Client;
+
+  constructor() {
+    this.client = new Client();
+  }
+
+  public save(client: Client) {}
+}
