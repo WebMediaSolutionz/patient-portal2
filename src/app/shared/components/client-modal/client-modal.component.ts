@@ -17,9 +17,9 @@ import { Client } from '../../custom-types/classes/client';
 })
 export class ClientModalComponent extends ModalComponent {
 
-  @Output() save: EventEmitter<any> = new EventEmitter;
+  @Output() protected save: EventEmitter<any> = new EventEmitter();
 
-  @Input() private client: Client;
+  @Input() private client: Client = new Client();
 
   constructor(private webService: WebService) {
     super();

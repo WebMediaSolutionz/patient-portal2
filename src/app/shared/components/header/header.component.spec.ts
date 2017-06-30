@@ -1,15 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 // Components
 import { HeaderComponent } from './header.component';
 
 // Services
-import { AuthService } from "../../services/auth.service";
-
-class AuthServiceStub {
-  public logout() {}
-}
+import { AuthService } from '../../services/auth.service';
+import { AuthServiceStub } from '../../services/auth.service.stub';
 
 describe('Header Component', () => {
   let component: HeaderComponent;

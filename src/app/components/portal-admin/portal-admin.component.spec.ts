@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Observable } from "rxjs";
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { Observable } from 'rxjs';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 // Components
 import { PortalAdminComponent } from './portal-admin.component';
@@ -50,7 +50,7 @@ describe('PortalAdmin Component', () => {
       });
 
       fixture.detectChanges();
-      
+
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -62,7 +62,7 @@ describe('PortalAdmin Component', () => {
       });
 
       component.saveClient(null);
-      
+
       expect(spy).toHaveBeenCalled();
     });
   });

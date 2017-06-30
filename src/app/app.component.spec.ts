@@ -7,26 +7,12 @@ import { AppComponent } from './app.component';
 
 // Services
 import { ConfigService } from './shared/services/config.service';
-import { AuthService } from "./shared/services/auth.service";
+import { AuthService } from './shared/services/auth.service';
+import { AuthServiceStub } from './shared/services/auth.service.stub';
+import { ConfigServiceStub } from './shared/services/config.service.stub';
 
 // Pipes
 import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
-
-const configs = {
-  product: 'PulseCloud',
-  account: 'QB1486',
-  errorDuration: 2000
-};
-
-class ConfigServiceStub {
-  public getConfig() {
-    return Observable.of(configs);
-  }
-}
-
-class AuthServiceStub {
-  public isAuthenticated: boolean;
-}
 
 describe('App Component', () => {
   let component: AppComponent;
@@ -58,7 +44,14 @@ describe('App Component', () => {
   });
 
   describe('ngOnInit()', () => {
-    it('should invoke ConfigService.getConfig to get config data and saving it in local storage', () => {
+    it( 'should invoke ConfigService.getConfig to get ' +
+        'config data and saving it in local storage', () => {
+      const configs = {
+        product: 'PulseCloud',
+        account: 'QB1486',
+        errorDuration: 2000
+      };
+
       let spy = spyOn(component['configService'], 'getConfig').and.callFake(() => {
         return Observable.of(configs);
       });

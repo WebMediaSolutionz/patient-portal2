@@ -32,10 +32,11 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FieldComponent } from './shared/components/field/field.component';
 import { ClinicBrandingComponent } from './components/clinic-branding/clinic-branding.component';
 import { GeneralSettingsComponent } from './components/general-settings/general-settings.component';
-import { PatientManagementComponent } from './components/patient-management/patient-management.component';
+import { PatientManagementComponent } from
+'./components/patient-management/patient-management.component';
 import { TemplatesComponent } from './components/templates/templates.component';
 import { PortalAdminComponent } from './components/portal-admin/portal-admin.component';
-import { ClientModalComponent } from "./shared/components/client-modal/client-modal.component";
+import { ClientModalComponent } from './shared/components/client-modal/client-modal.component';
 
 @NgModule({
   declarations: [

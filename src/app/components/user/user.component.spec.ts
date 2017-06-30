@@ -1,18 +1,18 @@
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 
 // Components
 import { UserComponent } from './user.component';
 
 // Services
-import { WebService } from "../../shared/services/web.service";
+import { WebService } from '../../shared/services/web.service';
 
 // Pipes
-import { CapitalizePipe } from "../../shared/pipes/capitalize.pipe";
+import { CapitalizePipe } from '../../shared/pipes/capitalize.pipe';
 
 // Models
-import { User } from "../../shared/custom-types/classes/user";
+import { User } from '../../shared/custom-types/classes/user';
 
 class WebServiceStub {
   public getUser() {
@@ -39,7 +39,7 @@ describe('User Component', () => {
       ],
       schemas: [ NO_ERRORS_SCHEMA ]
     });
-    
+
     fixture = TestBed.createComponent(UserComponent);
     component = fixture.componentInstance;
   });

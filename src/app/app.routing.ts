@@ -9,9 +9,10 @@ import { AuthManager } from './shared/services/auth.manager';
 import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ClinicBrandingComponent } from "./components/clinic-branding/clinic-branding.component";
+import { ClinicBrandingComponent } from './components/clinic-branding/clinic-branding.component';
 import { GeneralSettingsComponent } from './components/general-settings/general-settings.component';
-import { PatientManagementComponent } from './components/patient-management/patient-management.component';
+import { PatientManagementComponent } from
+'./components/patient-management/patient-management.component';
 import { TemplatesComponent } from './components/templates/templates.component';
 import { PortalAdminComponent } from './components/portal-admin/portal-admin.component';
 import { ClientsComponent } from './components/clients/clients.component';
