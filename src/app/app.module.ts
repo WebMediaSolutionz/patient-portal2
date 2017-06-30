@@ -27,7 +27,7 @@ import { NavComponent } from './shared/components/nav/nav.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { PracticesAndRolesComponent } from './components/practices-and-roles/practices-and-roles.component';
+import { ClientsComponent } from './components/clients/clients.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FieldComponent } from './shared/components/field/field.component';
 import { ClinicBrandingComponent } from './components/clinic-branding/clinic-branding.component';
@@ -46,7 +46,7 @@ import { ClientModalComponent } from "./shared/components/client-modal/client-mo
     UserComponent,
     PageNotFoundComponent,
     FieldComponent,
-    PracticesAndRolesComponent,
+    ClientsComponent,
     HeaderComponent,
     ClinicBrandingComponent,
     GeneralSettingsComponent,

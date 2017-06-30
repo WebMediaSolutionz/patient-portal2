@@ -26,8 +26,6 @@ export class ClientModalComponent extends ModalComponent {
   }
 
   public saveItem(): void {
-    // console.info('save client');
     this.save.emit(this.client);
-    // this.webService.saveClient(this.client);
   }
 }
