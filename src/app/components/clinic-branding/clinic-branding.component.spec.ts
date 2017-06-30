@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Observable } from "rxjs";
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { Observable } from 'rxjs';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 // Components
 import { ClinicBrandingComponent } from './clinic-branding.component';
@@ -9,7 +9,7 @@ import { ClinicBrandingComponent } from './clinic-branding.component';
 import { WebService } from '../../shared/services/web.service';
 
 // Pipes
-import { CapitalizePipe } from "../../shared/pipes/capitalize.pipe";
+import { CapitalizePipe } from '../../shared/pipes/capitalize.pipe';
 
 class WebServiceStub {
   public getOne(url: string, id: string) {
@@ -56,7 +56,7 @@ describe('ClinicBranding Component', () => {
       });
 
       fixture.detectChanges();
-      
+
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -68,7 +68,7 @@ describe('ClinicBranding Component', () => {
       });
 
       component.addUpdate();
-      
+
       expect(spy).toHaveBeenCalled();
     });
   });

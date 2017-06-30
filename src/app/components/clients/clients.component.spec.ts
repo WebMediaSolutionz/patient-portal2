@@ -1,21 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Observable } from "rxjs";
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { Observable } from 'rxjs';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 // Components
 import { ClientsComponent } from './clients.component';
 
 // Services
-import { WebService } from "../../shared/services/web.service";
+import { WebService } from '../../shared/services/web.service';
+import { WebServiceStub } from '../../shared/services/web.service.stub';
 
 // Pipes
-import { CapitalizePipe } from "../../shared/pipes/capitalize.pipe";
-
-class WebServiceStub {
-  getClients() {
-    return Observable.empty();
-  }
-}
+import { CapitalizePipe } from '../../shared/pipes/capitalize.pipe';
 
 describe('Clients Component', () => {
   let component: ClientsComponent;
@@ -25,7 +20,7 @@ describe('Clients Component', () => {
     TestBed.configureTestingModule({
       declarations: [
         ClientsComponent,
-        CapitalizePipe  
+        CapitalizePipe
       ],
       providers: [
         { provide: WebService, useClass: WebServiceStub }
@@ -52,7 +47,7 @@ describe('Clients Component', () => {
       });
 
       fixture.detectChanges();
-      
+
       expect(spy).toHaveBeenCalled();
     });
   });

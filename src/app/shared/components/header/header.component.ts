@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 // Services
-import { AuthService } from "../../services/auth.service";
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   moduleId: module.id,
@@ -12,5 +12,5 @@ import { AuthService } from "../../services/auth.service";
 export class HeaderComponent {
 
   constructor(private authService: AuthService) {}
-  
+
 }
