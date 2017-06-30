@@ -3,7 +3,7 @@ import { Observable } from "rxjs";
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 
 // Components
-import { PracticesAndRolesComponent } from './practices-and-roles.component';
+import { ClientsComponent } from './clients.component';
 
 // Services
 import { WebService } from "../../shared/services/web.service";
@@ -17,14 +17,14 @@ class WebServiceStub {
   }
 }
 
-describe('PracticesAndRoles Component', () => {
-  let component: PracticesAndRolesComponent;
-  let fixture: ComponentFixture<PracticesAndRolesComponent>;
+describe('Clients Component', () => {
+  let component: ClientsComponent;
+  let fixture: ComponentFixture<ClientsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        PracticesAndRolesComponent,
+        ClientsComponent,
         CapitalizePipe  
       ],
       providers: [
@@ -33,7 +33,7 @@ describe('PracticesAndRoles Component', () => {
       schemas: [ NO_ERRORS_SCHEMA ]
     });
 
-    fixture = TestBed.createComponent(PracticesAndRolesComponent);
+    fixture = TestBed.createComponent(ClientsComponent);
     component = fixture.componentInstance;
   });
 

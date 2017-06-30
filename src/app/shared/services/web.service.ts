@@ -49,12 +49,12 @@ export class WebService {
                     .map((res) => res.json());
   }
 
-  public saveClient(clientData: any): any {
+  public saveClient(client: Client): any {
    this._confirmationMsg(`Client Modifications been saved`);
 
    this.dest = this.API_URL + '/saveclient';
 
-    return this.http.post(this.dest, clientData, this.authService.tokenHeader)
+    return this.http.post(this.dest, client, this.authService.tokenHeader)
                     .map((res) => res.json());
   }
 

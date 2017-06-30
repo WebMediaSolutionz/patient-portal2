@@ -4,11 +4,12 @@ import { Component, OnInit } from '@angular/core';
 import { WebService } from '../../shared/services/web.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'ss2-practices-and-roles',
-  templateUrl: './practices-and-roles.component.html',
-  styleUrls: ['./practices-and-roles.component.scss']
+  templateUrl: 'clients.component.html',
+  styleUrls: ['clients.component.scss']
 })
-export class PracticesAndRolesComponent implements OnInit {
+export class ClientsComponent implements OnInit {
 
   private title: string = 'practices and roles';
 

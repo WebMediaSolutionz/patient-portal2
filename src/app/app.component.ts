@@ -20,21 +20,22 @@ export class AppComponent implements OnInit {
               private authService: AuthService) {}
 
   public ngOnInit(): void {
-    this.configService.getConfig()
-                      .subscribe(
-                        (data) => {
-                          this.configs = data;
+    this.configService
+        .getConfig()
+        .subscribe(
+          (data) => {
+            this.configs = data;
 
-                          localStorage.setItem('product', this.configs.product);
-                          localStorage.setItem('account', this.configs.account);
-                          localStorage.setItem('errorDuration', this.configs.errorDuration);
-                        },
-                        (err) => {
-                          console.info(err);
-                        },
-                        () => {
-                          this.loaded = true;
-                        }
-                      );
+            localStorage.setItem('product', this.configs.product);
+            localStorage.setItem('account', this.configs.account);
+            localStorage.setItem('errorDuration', this.configs.errorDuration);
+          },
+          (err) => {
+            console.info(err);
+          },
+          () => {
+            this.loaded = true;
+          }
+        );
   }
 }

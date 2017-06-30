@@ -14,7 +14,7 @@ import { GeneralSettingsComponent } from './components/general-settings/general-
 import { PatientManagementComponent } from './components/patient-management/patient-management.component';
 import { TemplatesComponent } from './components/templates/templates.component';
 import { PortalAdminComponent } from './components/portal-admin/portal-admin.component';
-import { PracticesAndRolesComponent } from './components/practices-and-roles/practices-and-roles.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 const appRoutes: Routes = [
     {
@@ -58,7 +58,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'clients',
-        component: PracticesAndRolesComponent,
+        component: ClientsComponent,
         canActivate: [AuthManager]
     },
     {

@@ -40,12 +40,10 @@ export class PortalAdminComponent implements OnInit {
     });
   }
 
-  public saveClient(client): void {
-    console.info('save client:', client);
-
+  public saveClient(client: Client): void {
     this.webService.saveClient(client).subscribe(
       () => {
-        console.info('save client: ', client);
+        console.info('save client:', client);
       },
       (error) => {
         console.error('error');

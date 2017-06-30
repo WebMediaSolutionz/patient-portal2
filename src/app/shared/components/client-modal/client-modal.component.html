@@ -6,11 +6,11 @@
 
       <div class="modal-header">
 
-        <h5 class="modal-title" id="exampleModalLabel">{{client.clientname}}</h5>
-
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+
+        <h2 class="modal-title center_text" id="exampleModalLabel">{{client.clientname | myCapitalize }}</h2>
 
       </div>
 
