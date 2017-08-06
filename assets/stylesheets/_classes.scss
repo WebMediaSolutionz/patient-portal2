@@ -1,0 +1,31 @@
+.container {
+    margin-bottom: 30px;
+
+    .content,
+    .card {
+        background-color: $content_bg_color;
+        padding: 20px;
+        box-shadow: $box-shadow;
+        border-radius: 5px;
+    }
+}
+
+.app-loading {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 300px;
+}
+
+.inner-card {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: $blue_bg;
+}
+
+.btn {
+    border: none;
+}

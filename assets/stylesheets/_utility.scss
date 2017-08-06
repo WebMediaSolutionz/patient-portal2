@@ -1,0 +1,29 @@
+.outline {
+    border: thin solid red;
+}
+
+ul {
+
+    &.no-styles {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none
+        }
+    }
+}
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+
+    & > [class*='col-'] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.center_text {
+    text-align: center;
+}
